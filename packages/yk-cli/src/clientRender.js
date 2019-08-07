@@ -58,6 +58,7 @@ const string = reactToString(Layout, props)
 const dev = () => {
   const compiler = webpack(clientConfig)
   const server = new WebpackDevServer(compiler, {
+    disableHostCheck: true,
     publicPath: '/',
     hotOnly: true,
     host: 'localhost',

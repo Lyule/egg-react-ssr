@@ -126,7 +126,7 @@ module.exports = {
     `<script src='/static/js/vendor.chunk.js'></script>`,
     `<script src='/static/js/Page.chunk.js'></script>`
   ], // 客户端需要加载的静态资源文件表
-  serverJs: resolvePath(`dist/Page.server.js`)
+  serverJs: resolvePath(`dist/Page.server.js`) // 打包后的server端的bundle文件路径
 }
 ```
 
@@ -165,7 +165,6 @@ module.exports = {
     ├── assets
     │   └── common.less
     ├── entry.js // webpack打包入口文件，分环境导出不同配置
-    ├── index.html // 页面骨架模版
     ├── layout
     │   ├── index.js // 页面布局
     │   └── index.less
@@ -205,6 +204,10 @@ $ npm run prod // 模拟SSR应用生产环境
 $ npm run build // 打包服务端以及客户端资源文件
 $ npm run analyze // 可视化分析客户端打包的资源详情
 ```
+
+## Changelog
+
+每一个版本的详细改动请查看 [release notes](https://github.com/ykfe/egg-react-ssr/releases)
 
 ## 与其他方案的对比
 
